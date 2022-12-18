@@ -4,13 +4,14 @@ import { createPinia } from 'pinia'
 
 // Components
 import App from './App.vue'
-import router from './router'
+import router from './router/router'
 
 // Plugins
 import {loadFonts} from "@/plugins/webfontloader";
 import vuetify from "@/plugins/vuetify";
 
 // Style
+import "@/assets/main.scss"
 import "@/assets/common.scss"
 
 loadFonts()

@@ -1,18 +1,19 @@
 <template>
   <div class="main-container">
     <div class="content-page">
-      <v-main>
-        <router-view></router-view>
-      </v-main>
+      <RouterView></RouterView>
     </div>
     <div class="centerX bottom-nav">
       <BottomTabNavigation></BottomTabNavigation>
     </div>
   </div>
 </template>
+
 <script setup>
 import BottomTabNavigation from "@/components/BottomTabNavigation";
+import { RouterView } from 'vue-router'
 </script>
+
 <style lang="scss" scoped>
 .main-container {
   background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
