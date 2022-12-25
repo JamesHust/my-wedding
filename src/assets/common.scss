@@ -40,6 +40,12 @@
   align-items: center;
 }
 
+.spaceBetweenX {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .spreadX {
   width: 100%;
 }

@@ -9,7 +9,7 @@ const router = createRouter({
       redirect: 'home'
     },
     {
-      path: '/home',
+      path: '/home/',
       component: AppTemplate,
       children: [
         {
@@ -20,7 +20,7 @@ const router = createRouter({
       ]
     },
     {
-      path: '/gallery',
+      path: '/gallery/',
       component: AppTemplate,
       children: [
         {
@@ -31,7 +31,7 @@ const router = createRouter({
       ]
     },
     {
-      path: '/qr',
+      path: '/qr/',
       component: AppTemplate,
       children: [
         {
@@ -42,7 +42,7 @@ const router = createRouter({
       ]
     },
     {
-      path: '/map-directions',
+      path: '/map-directions/',
       component: AppTemplate,
       children: [
         {
@@ -53,7 +53,7 @@ const router = createRouter({
       ]
     },
     {
-      path: '/event-time',
+      path: '/event-time/',
       component: AppTemplate,
       children: [
         {
