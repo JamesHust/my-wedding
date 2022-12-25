@@ -20,8 +20,10 @@
     </div>
     <div class="centerY">
       <img class="icon-playlist" src="@/assets/image/playlist/back-playlist.svg" alt="icon_prev_playlist">
-      <img v-if="isPlayAudio" class="icon-playlist" src="@/assets/image/playlist/pause.svg" alt="icon_play_or_pause" @click="playOrPauseAudio">
-      <img v-else class="icon-playlist" src="@/assets/image/playlist/play.svg" alt="icon_play_or_pause" @click="playOrPauseAudio">
+      <img v-if="isPlayAudio" class="icon-playlist" src="@/assets/image/playlist/pause.svg" alt="icon_play_or_pause"
+           @click="playOrPauseAudio">
+      <img v-else class="icon-playlist" src="@/assets/image/playlist/play.svg" alt="icon_play_or_pause"
+           @click="playOrPauseAudio">
       <img class="icon-playlist" src="@/assets/image/playlist/next-playlist.svg" alt="icon_next_playlist">
     </div>
   </div>
@@ -89,7 +91,7 @@ function playOrPauseAudio() {
   }
 
   .icon-playlist {
-    width:26px;
+    width: 26px;
 
     &:nth-child(2) {
       margin: 0 16px;
