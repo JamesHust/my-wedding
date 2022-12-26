@@ -1,7 +1,17 @@
 <template>
+  <!--  <div class="gallery">-->
+  <!--    <div class="list-img">-->
+  <!--      <div class="img-item" v-for="nameImg in 17" :key="nameImg">-->
+  <!--        <img-->
+  <!--            :src="`/src/assets/image/gallery/${nameImg}.jpg`"-->
+  <!--            :alt="`img_${nameImg}`"-->
+  <!--        >-->
+  <!--      </div>-->
+  <!--    </div>-->
+  <!--  </div>-->
   <div class="gallery">
-    <div class="list-img">
-      <div :class="nameImg%2 === 0 ? 'img-item-0' : 'img-item-1'" v-for="nameImg in 17" :key="nameImg">
+    <div id="list" class="list-img">
+      <div class="img-item" v-for="nameImg in 18" :key="nameImg">
         <img
             :src="`/src/assets/image/gallery/${nameImg}.jpg`"
             :alt="`img_${nameImg}`"
@@ -18,36 +28,25 @@
 .gallery {
   height: 100%;
   overflow-y: auto;
+  padding: 10px;
 }
 
 .list-img {
-  max-width: calc(100vw - 20px);
-  margin: 10px auto;
-  display: grid;
-  grid-gap: 10px;
-  /* fit as many columns as possible, 300px wide each: */
-  grid-template-columns: repeat(auto-fill, 300px);
-  /* each row is 10px high -- we always span 2+ */
-  grid-auto-rows: minmax(10px, auto);
-  justify-content: center;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: -10px;
+  column-count: 4;
+  column-gap: 10px;
+  column-fill: auto;
+}
 
-  .list-img > * {
-    width: 300px;
-    float: left;
-  }
-
-  .img-item-0 {
-    grid-row-end: span 2;
-  }
-
-  .img-item-0 {
-    grid-row-end: span 3;
-  }
+.img-item {
+  margin-bottom: 5px !important;
+  column-break-inside: avoid;
 
   img {
-    max-width: 100%;
+    width: 100%;
     border-radius: 8px;
-    //height: 100%;
   }
 }
 
@@ -60,12 +59,14 @@
 /*For mobiles*/
 @media (min-width: 320px) and (max-width: 768px) {
   .list-img {
-    grid-gap: 5px;
-    grid-template-columns: repeat(auto-fill, calc((100vw - 25px) / 2));
+    column-count: 2 !important;
+    margin-bottom: -5px;
+    column-count: 3;
+    column-gap: 5px;
+  }
 
-    .img-item-0, .img-item-1 {
-      width: calc((100vw - 25px) / 2);
-    }
+  .img-item {
+    margin-bottom: 0 !important;
   }
 }
 </style>
