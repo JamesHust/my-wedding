@@ -1,22 +1,10 @@
 <template>
   <div class="gallery">
     <div id="list" class="list-img">
-      <div class="img-item">
+      <div class="img-item" v-for="nameImg in 16" :key="nameImg">
         <img
-            src="@/assets/image/gallery/1.jpg"
-            alt="img_1"
-        >
-      </div>
-      <div class="img-item">
-        <img
-            src="@/assets/image/gallery/2.jpg"
-            alt="img_2"
-        >
-      </div>
-      <div class="img-item">
-        <img
-            src="@/assets/image/gallery/3.jpg"
-            alt="img_3"
+            :src="`/src/assets/image/gallery/${nameImg}.jpg`"
+            :alt="`img_${nameImg}`"
         >
       </div>
     </div>
