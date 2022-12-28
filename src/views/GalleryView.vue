@@ -1,20 +1,9 @@
 <template>
-  <!--  <div class="gallery">-->
-  <!--    <div class="list-img">-->
-  <!--      <div class="img-item" v-for="nameImg in 17" :key="nameImg">-->
-  <!--        <img-->
-  <!--            :src="`/src/assets/image/gallery/${nameImg}.jpg`"-->
-  <!--            :alt="`img_${nameImg}`"-->
-  <!--        >-->
-  <!--      </div>-->
-  <!--    </div>-->
-  <!--  </div>-->
-<!--  <img src="@/assets/image/test.png" alt="" style="width: 100%">-->
   <div class="gallery">
     <div id="list" class="list-img">
-      <div class="img-item" v-for="nameImg in 3" :key="nameImg">
+      <div class="img-item" v-for="nameImg in 16" :key="nameImg">
         <img
-            :src="getA(nameImg)"
+            :src="getImgSrc(nameImg)"
             :alt="`img_${nameImg}`"
         >
       </div>
@@ -23,9 +12,9 @@
 </template>
 
 <script setup>
-// const a = ["a", "b", "c"]
-function getA(nameImg) {
-  return new URL(`./assets/${nameImg}.jpg`, import.meta.url).href
+const getImgSrc = (nameImg) => {
+  let url = `/src/assets/image/gallery/${nameImg}.jpg`
+  return new URL(url, import.meta.url).href
 }
 </script>
 
