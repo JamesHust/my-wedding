@@ -3,7 +3,7 @@
     <div id="list" class="list-img">
       <div class="img-item" v-for="nameImg in 16" :key="nameImg">
         <img
-            :src="`@/assets/image/gallery/${nameImg}.jpg`"
+            :src="srcImg(`/img/gallery/${nameImg}.jpg`)"
             :alt="`img_${nameImg}`"
         >
       </div>
@@ -12,10 +12,9 @@
 </template>
 
 <script setup>
-// const getImgSrc = (nameImg) => {
-//   let url = `/src/assets/image/gallery/${nameImg}.jpg`
-//   return new URL(url, import.meta.url).href
-// }
+import {getCurrentInstance} from "vue";
+const { proxy } = getCurrentInstance()
+const srcImg = proxy.$image
 </script>
 
 <style lang="scss" scoped>
