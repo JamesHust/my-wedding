@@ -14,7 +14,7 @@
     <div id="list" class="list-img">
       <div class="img-item" v-for="nameImg in 3" :key="nameImg">
         <img
-            :src="`@/src/assets/img_${nameImg}.jpg`"
+            :src="getA(nameImg)"
             :alt="`img_${nameImg}`"
         >
       </div>
@@ -24,6 +24,9 @@
 
 <script setup>
 // const a = ["a", "b", "c"]
+function getA(nameImg) {
+  return new URL(`./assets/${nameImg}.jpg`, import.meta.url).href
+}
 </script>
 
 <style lang="scss" scoped>
