@@ -13,7 +13,7 @@
     <div id="list" class="list-img">
       <div class="img-item" v-for="nameImg in 4" :key="nameImg">
         <img
-            :src="`/src/assets/img_${nameImg}.jpg`"
+            :src="`/src/assets/img_${nameImg}.png`"
             :alt="`img_${nameImg}`"
         >
       </div>
