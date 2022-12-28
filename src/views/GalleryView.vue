@@ -11,9 +11,9 @@
   <!--  </div>-->
   <div class="gallery">
     <div id="list" class="list-img">
-      <div class="img-item" v-for="nameImg in a" :key="nameImg">
+      <div class="img-item" v-for="nameImg in 3" :key="nameImg">
         <img
-            :src="`/src/assets/image/gallery/${nameImg}.jpg`"
+            :src="`/src/assets/image/gallery/img_${nameImg}.jpg`"
             :alt="`img_${nameImg}`"
         >
       </div>
@@ -22,7 +22,7 @@
 </template>
 
 <script setup>
-const a = ["a", "b", "c"]
+// const a = ["a", "b", "c"]
 </script>
 
 <style lang="scss" scoped>
