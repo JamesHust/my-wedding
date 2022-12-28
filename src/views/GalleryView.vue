@@ -9,16 +9,17 @@
   <!--      </div>-->
   <!--    </div>-->
   <!--  </div>-->
-  <div class="gallery">
-    <div id="list" class="list-img">
-      <div class="img-item" v-for="nameImg in 4" :key="nameImg">
-        <img
-            :src="`/src/assets/img_${nameImg}.png`"
-            :alt="`img_${nameImg}`"
-        >
-      </div>
-    </div>
-  </div>
+  <img src="@/assets/image/test.png" alt="" style="width: 100%">
+<!--  <div class="gallery">-->
+<!--    <div id="list" class="list-img">-->
+<!--      <div class="img-item" v-for="nameImg in 4" :key="nameImg">-->
+<!--        <img-->
+<!--            :src="`/src/assets/img_${nameImg}.png`"-->
+<!--            :alt="`img_${nameImg}`"-->
+<!--        >-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
 </template>
 
 <script setup>
