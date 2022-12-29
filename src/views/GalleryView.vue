@@ -1,10 +1,18 @@
 <template>
+  <VueEasyLightbox
+      :visible="visibleRef"
+      :imgs="imgsRef"
+      :index="indexRef"
+      :loop="true"
+      @hide="onHide"
+  />
   <div class="gallery">
     <div id="list" class="list-img">
-      <div class="img-item" v-for="nameImg in 16" :key="nameImg">
+      <div class="img-item" v-for="nameImg in countImg" :key="nameImg">
         <img
             :src="srcImg(`/img/gallery/${nameImg}.jpg`)"
             :alt="`img_${nameImg}`"
+            @click="show(nameImg - 1)"
         >
       </div>
     </div>
@@ -12,9 +20,28 @@
 </template>
 
 <script setup>
-import {getCurrentInstance} from "vue";
+import VueEasyLightbox, {useEasyLightbox} from 'vue-easy-lightbox'
+import {getCurrentInstance, ref} from "vue";
+
 const { proxy } = getCurrentInstance()
 const srcImg = proxy.$image
+const countImg = ref(16)
+/* ----------------------------------------- */
+const getImages = () => {
+  let images = []
+  for(let i = 0; i < countImg.value; i++){
+    images.push(srcImg(`/img/gallery/${i + 1}.jpg`))
+  }
+  return images
+}
+
+const {
+  show, onHide,
+  visibleRef, indexRef, imgsRef
+} = useEasyLightbox({
+  imgs: getImages(),
+  initIndex: 0
+})
 </script>
 
 <style lang="scss" scoped>

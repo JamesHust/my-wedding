@@ -14,6 +14,8 @@ import vuetify from "@/plugins/vuetify";
 import "@/assets/main.scss"
 import "@/assets/common.scss"
 import {loadGlobalVariables} from "@/plugins/global-variables";
+// Style lightbox
+import 'vue-easy-lightbox/external-css/vue-easy-lightbox.css'
 
 loadFonts()
 
