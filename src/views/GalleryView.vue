@@ -6,6 +6,7 @@
       :loop="true"
       @hide="onHide"
   />
+  <div class="title-page">Album</div>
   <div class="gallery">
     <div id="list" class="list-img">
       <div class="img-item" v-for="nameImg in countImg" :key="nameImg">
@@ -48,7 +49,7 @@ const {
 .gallery {
   height: 100%;
   overflow-y: auto;
-  padding: 10px;
+  padding: 10px 10px 58px 10px;
 }
 
 .list-img {

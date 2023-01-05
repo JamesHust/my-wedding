@@ -23,6 +23,7 @@ const route = useRoute()
 <style lang="scss" scoped>
 .main-container {
   //background-image: linear-gradient(to top, #fad0c4 0%, #FFD1F0FF 100%);
+  background: #fafafa;
   min-height: 100%;
   position: relative;
 }
