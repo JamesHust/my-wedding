@@ -19,7 +19,7 @@
   align-items: center;
   font-weight: 500;
   border-radius: 100px;
-  height: 40px;
+  height: 48px;
   padding: 4px;
 
   .tab-title {
@@ -28,8 +28,21 @@
 
   .tab-active {
     background: #FFFFFF;
-    height: 32px;
-    line-height: 32px;
+    height: 40px;
+    line-height: 40px;
     border-radius: 100px;
   }
+}
+
+// style button
+.btn-outline-normal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  height: 46px;
+  line-height: 46px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #FF597B;
 }
