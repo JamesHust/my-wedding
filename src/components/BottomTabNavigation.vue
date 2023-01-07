@@ -30,7 +30,7 @@ import IconGallery from "@/components/icons/IconGallery";
 import IconQR from "@/components/icons/IconQR";
 import IconTime from "@/components/icons/IconTime";
 import IconMap from "@/components/icons/IconMap";
-import {ref, onMounted} from "vue";
+import {ref, onMounted, watch} from "vue";
 import {useRoute, useRouter} from "vue-router";
 
 const tabsMap = ref({
@@ -44,10 +44,12 @@ const tabsMap = ref({
 const router = useRouter()
 const route = useRoute()
 
-onMounted(() => {
+const updateTab = () => {
   let pathName = route.path.replaceAll("/", "")
   tabActive.value = tabsMap.value[pathName]
-})
+}
+onMounted(updateTab)
+watch(() => route.path,  updateTab)
 /*--------------------------------------------------------*/
 const tabActive = ref(0)
 
@@ -55,7 +57,6 @@ function redirectTo(tabIndex, key) {
   tabActive.value = tabIndex
   router.push(`/${key}/`)
 }
-
 /*--------------------------------------------------------*/
 
 </script>

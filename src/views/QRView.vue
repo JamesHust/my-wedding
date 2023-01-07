@@ -128,6 +128,7 @@ const downloadQRCode = async () => {
 .card-qr {
   background: #FFFFFF;
   border-radius: 8px;
+  border: 1px solid #eee;
 
   .list-actions {
     border-top: 1px dashed #f0f0f0;
