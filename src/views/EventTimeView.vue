@@ -1,6 +1,6 @@
 <template>
   <div class="title-page">Dòng sự kiện</div>
-  <img src="@/assets/image/eventtime/DSC_8343.jpg" alt="image-timeline" style="width: 100%">
+  <img src="@/assets/image/eventtime/DSC_8344.jpg" alt="image-timeline" style="width: 100%">
   <div class="timeline">
     <v-timeline side="end" align="start">
       <v-timeline-item
