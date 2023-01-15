@@ -51,7 +51,8 @@ function playOrPauseAudio() {
 
 <style lang="scss" scoped>
 .audio-bar {
-  background: #ffffff61;
+  //background: #ffffff61;
+  background: #FFFFFF91;
 
   .audio-cd {
     height: 50px;
