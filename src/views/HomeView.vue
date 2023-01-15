@@ -2,7 +2,7 @@
   <div class="content-page centerXY">
     <img src="@/assets/image/anh-nen.jpg" alt="banner-background" class="banner-background">
     <div class="title-content">
-      <div>Thế Hưng & Thảo Vân</div>
+      <div>Thế Hưng - Thảo Vân</div>
       <div class="child-title">
         06.02.2023
       </div>
@@ -28,7 +28,7 @@
   .title-content {
     position: absolute;
     top: 100px;
-    font-family: 'Alex Brush', cursive;
+    font-family: 'Dancing Script', cursive;
     color: #ffffff;
     font-weight: 400;
     font-size: 36px;
@@ -36,7 +36,7 @@
 
     .child-title {
       font-family: 'Be Vietnam Pro', sans-serif;
-      font-size: 18px;
+      font-size: 16px;
     }
   }
 }

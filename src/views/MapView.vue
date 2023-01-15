@@ -11,7 +11,7 @@
         <div class="centerY justify-space-between mb-10">
           <div class="label">Nhà Trai</div>
           <div class="centerY">
-            <div class="btn-map mr-6">Địa chỉ</div>
+            <div class="btn-map mr-6" @click="openMapAddress('https://maps.app.goo.gl/Lze1DwkMK65tobv39')">Địa chỉ</div>
             <div class="btn-map">Chỉ đường</div>
           </div>
         </div>
@@ -22,7 +22,7 @@
         <div class="centerY">
           <img src="@/assets/image/phone.svg" alt="icon-phone">
           <div style="padding-top: 1px">0866079203</div>
-          <IconCopy class="ml-1" :size="18"></IconCopy>
+          <IconCopy class="ml-1" :size="18" @click="copyPhoneNumber('0866079203')"></IconCopy>
         </div>
       </div>
     </div>
@@ -36,7 +36,7 @@
         <div class="centerY justify-space-between mb-10">
           <div class="label">Nhà Gái</div>
           <div class="centerY">
-            <div class="btn-map mr-6">Địa chỉ</div>
+            <div class="btn-map mr-6" @click="openMapAddress('https://maps.app.goo.gl/Xx9U5WV8qxK8wA5L7')">Địa chỉ</div>
             <div class="btn-map">Chỉ đường</div>
           </div>
         </div>
@@ -47,7 +47,7 @@
         <div class="centerY">
           <img src="@/assets/image/phone.svg" alt="icon-phone">
           <div style="padding-top: 1px">0778231199</div>
-          <IconCopy class="ml-1" :size="18"></IconCopy>
+          <IconCopy class="ml-1" :size="18" @click="copyPhoneNumber('0778231199')"></IconCopy>
         </div>
       </div>
     </div>
@@ -56,6 +56,14 @@
 
 <script setup>
 import IconCopy from "@/components/icons/IconCopy";
+
+const openMapAddress = (url) => {
+  window.open(url, '_blank')
+}
+/* ----------------------------------------- */
+const copyPhoneNumber = (phoneNumber) => {
+  navigator.clipboard.writeText(phoneNumber)
+}
 </script>
 
 <style lang="scss" scoped>
