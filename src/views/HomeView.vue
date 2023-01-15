@@ -15,12 +15,14 @@
 
 <style lang="scss" scoped>
 .content-page {
+  background: #fefdf9;
   height: 100%;
   width: 100vw;
   position: relative;
   overflow: hidden;
   img {
     height: 100%;
+    //width: 100%;
   }
 
   .title-content {
