@@ -26,7 +26,7 @@ import {getCurrentInstance, ref} from "vue";
 
 const { proxy } = getCurrentInstance()
 const srcImg = proxy.$image
-const countImg = ref(22)
+const countImg = ref(12)
 /* ----------------------------------------- */
 const getImages = () => {
   let images = []
